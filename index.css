@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+@font-face {
+  font-family: 'Back-to-1982';
+  src: url('./webfonts_Back-to-1982/Back-to-1982.ttf.woff') format('woff'), url('./webfonts_Back-to-1982/Back-to-1982.ttf.svg#Back-to-1982') format('svg'), url('./webfonts_Back-to-1982/Back-to-1982.ttf.eot'), url('./webfonts_Back-to-1982/Back-to-1982.ttf.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  background: rgb(44, 37, 65);
+}
+
+header {
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: .6rem;
+  padding-bottom: .5rem;
+  padding-left: 2.5rem;
+  background: rgb(100, 65, 164);
+  /* padding: 10px; */
+  /* padding-left: calc(50% - 284px); */
+  /* background-image: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%); */
+}
+
+.video-container {
+  width: 100%;
+  padding-bottom: 20rem;
+  position: relative;
+  margin: auto;
+  /* why need position */
+}
+
+.top-video {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  /* why need position */
+}
+
+#user-container {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-bottom: 4rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: .8rem;
+  grid-row-gap: .8rem;
+}
+
+#user-container div {
+  position: relative;
+}
+
+#user-container div::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000;
+}
+
+#user-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: 'Back-to-1982';
+  color: #fff;
+}
+
+.displayName {
+  font-family: 'Back-to-1982';
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  background: #000;
+}
+
+.displayName+p {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: rgba(0, 0, 0, 0);
+  font-family: 'Roboto', sans-serif;
+  background: rgba(0, 0, 0, 0);
+  padding: 1rem 2rem;
+  line-height: 1.75rem;
+}
+
+.displayName+p:hover {
+  background: rgba(0, 0, 0, .8);
+  color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    padding-left: 1rem;
+  }
+  #user-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 3rem;
+  }
+}
